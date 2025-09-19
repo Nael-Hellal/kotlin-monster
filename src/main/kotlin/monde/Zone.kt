@@ -8,8 +8,8 @@ class Zone(
     var nom: String,
     val Expzone: Int,
     var especesMonstres: MutableList<String> = mutableListOf(),
-    val ZoneSuivante: Zone? = null,
-    val ZonePrecedente: Zone? = null
+    var ZoneSuivante: Zone? = null,
+    var ZonePrecedente: Zone? = null
 ) {
 
 //TODO : - faire la méthode genereMonstre() - faire la méthode rencontreMonstre()

@@ -18,7 +18,8 @@ var montagne= Zone(id= 2, nom = "Montagne", Expzone= 0)
 fun main() {
 //    println(especegalum.afficheArt())
 //    println(especegalum.afficheArt(deFace = false))
-
+    prairie.ZoneSuivante = montagne
+    montagne.ZonePrecedente = prairie
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))
