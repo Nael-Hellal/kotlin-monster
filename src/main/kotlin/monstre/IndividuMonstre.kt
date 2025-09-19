@@ -24,4 +24,7 @@ class IndividuMonstre (
         set(nouveauPv) {
             field=nouveauPv
         }
+    fun palierExp(niveau:Int = 1){
+
+    }
 }
