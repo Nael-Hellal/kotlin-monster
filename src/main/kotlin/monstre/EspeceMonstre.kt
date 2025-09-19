@@ -39,7 +39,7 @@ class EspeceMonstre (
     fun afficheArt(deFace: Boolean=true): String{
         val nomFichier = if(deFace) "front" else "back";
         val art=
-            File("src/main/ressource/art/${this.nom.lowercase()}/$nomFichier.txt").readText()
+            File("src/main/resources/art/${this.nom.lowercase()}/$nomFichier.txt").readText()
             val safeArt = art.replace("/","/")
             return safeArt.replace("\\u001B", "\u001B")
     }
