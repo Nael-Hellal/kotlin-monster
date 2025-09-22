@@ -14,9 +14,7 @@ var especebugsyface= EspeceMonstre(id = 10, nom= "Bugsyface", type="Insecte", ba
 var especegalum= EspeceMonstre(id = 13, nom = "Galum", type = "Minéral", basePv = 55, baseAttaque = 12, baseDefense = 15, baseVitesse = 6, baseAttaqueSpe = 8, baseDefenseSpe = 12, modPv = 13.0, modAttaque = 9.0, modDefense = 13.0, modVitesse = 4.0, modAttaqueSpe = 6.5, modDefenseSpe = 10.5, description = "Golem ancien de pierre, yeux lumineux en garde.", particularites = "Peut rester immobile des heures comme une statue.", caractères = "Sérieux, stoïque, fiable")
 var prairie= Zone(id = 1, nom = "Prairie", Expzone = 0, especesMonstres = mutableListOf("Springleaf"))
 var montagne= Zone(id= 2, nom = "Montagne", Expzone= 0)
-val monstre1 = IndividuMonstre(1, "springleaf", 1500.0, especeSpringLeaf)
-val monstre2 = IndividuMonstre(2, "flamkip", 1500.0, especeFlamkip)
-val monstre3 = IndividuMonstre(3, "aquamy", 1500.0, especeAquamy)
+
 
 
 
@@ -25,6 +23,9 @@ fun main() {
 //    println(especegalum.afficheArt(deFace = false))
     prairie.ZoneSuivante = montagne
     montagne.ZonePrecedente = prairie
+    val monstre1 = IndividuMonstre(1, "springleaf", especespringleaf,joueur,1500.0)
+    val monstre2 = IndividuMonstre(2, "flamkip", especeflamkip, joueur,1500.0)
+    val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, joueur, 1500.0)
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))

@@ -27,10 +27,11 @@ class IndividuMonstre (
             if (niveau == 1){
                 estNiveau1 = true
             }
-            field >= palierExp(niveau)
+            while (field >= palierExp(niveau)) {
 
-            return levelUp()
 
+                levelUp()
+            }
             estNiveau1 == false
 
             println("Le monstre $nom est maintenant niveau $niveau !")
@@ -52,12 +53,12 @@ class IndividuMonstre (
      */
     fun palierExp(niveau: Int): Int {
 
-        return 100 * (niveau - 1.0).pow(2).toInt()
+        return (100 * (niveau - 1.0).pow(2)).toInt()
     }
 
 
     fun levelUp() {
-        this.niveau + 1
+        this.niveau ++
         this.attaque = (this.espece.modAttaque * this.potentiel).toInt() + Random.nextInt(-2,3)
         this.défense = (this.espece.modDefense * this.potentiel).toInt() + Random.nextInt(-2, 3)
         this.vitesse = (this.espece.modVitesse * this.potentiel).toInt() + Random.nextInt(-2, 3)
