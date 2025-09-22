@@ -9,7 +9,7 @@ class IndividuMonstre (
     var nom: String,
     val espece: EspeceMonstre,
     var entraîneur: Entraineur? = null,
-    val expInit: Double
+    expInit: Double
 ) {
     var niveau: Int = 1
     var attaque: Int = espece.baseAttaque + Random.nextInt(-2, 3)
@@ -35,7 +35,7 @@ class IndividuMonstre (
 
             println("Le monstre $nom est maintenant niveau $niveau !")
 
-            if (estNiveau1 != false){
+            if (estNiveau1 == true){
             }
         }
     var pv: Int = pvMax
@@ -64,5 +64,8 @@ class IndividuMonstre (
         this.attaqueSpe = (this.espece.modAttaqueSpe * this.potentiel).toInt() + Random.nextInt(-2, 3)
         this.defenceSpe = (this.espece.modDefenseSpe * this.potentiel).toInt() + Random.nextInt(-2 , 3)
         this.pvMax = (this.espece.modPv * this.potentiel).toInt() * Random.nextInt(-5, 6)
+    }
+    init{
+        this.exp = expInit //applique le setter et déclenche un éventuel level-up
     }
 }
