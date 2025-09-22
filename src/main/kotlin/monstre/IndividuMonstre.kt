@@ -1,6 +1,7 @@
 package org.example.monstre
 
 import org.example.dresseur.Entraineur
+import kotlin.math.pow
 import kotlin.random.Random
 
 class IndividuMonstre (
@@ -24,7 +25,19 @@ class IndividuMonstre (
         set(nouveauPv) {
             field=nouveauPv
         }
-    fun palierExp(niveau:Int = 1){
 
+    /**
+     * Calcule l'éxperience totale nécessaire pour atteindre un niveau donné.
+     *
+     * @param niveau Niveau cible.
+     * @return Expérience cumulée nécessaire pour atteindre ce niveau.
+     */
+    fun palierExp(niveau: Int): Int{
+
+        return 100*(niveau - 1.0).pow(2).toInt()
     }
+}
+
+    fun levelUp(){
+       val caracteristiques:
 }
