@@ -107,8 +107,12 @@ class IndividuMonstre (
      * si l'utilisateur entre un texte vide, le nom n'est pas modifié.
      */
     fun renommer(){
-        println("Renommer le monstre ${this.nom} ?")
+        println("Renommer le monstre ${this.nom} : ")
         val nouveauNom = readln()
-
+        if(nouveauNom.isNotEmpty()){
+                this.nom = nouveauNom
+        }
+        if(nouveauNom.isEmpty()){
+        }
     }
 }
