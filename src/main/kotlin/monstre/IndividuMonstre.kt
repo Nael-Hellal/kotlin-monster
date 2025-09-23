@@ -39,10 +39,21 @@ class IndividuMonstre (
             if (estNiveau1 == true){
             }
         }
+
+    /**
+     * @property pv Points de vie actuels.
+     * Ne peut pas être inférieur à 0 ni supérieur à [pvMax].
+     */
     var pv: Int = pvMax
         get() = field
         set(nouveauPv) {
             field = nouveauPv
+            if (pv < 0){
+                pv == 0
+            }
+            if (pv > pvMax){
+                pv == pvMax
+            }
         }
 
     /**
