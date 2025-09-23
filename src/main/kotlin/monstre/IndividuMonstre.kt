@@ -99,14 +99,16 @@ class IndividuMonstre (
         cible.pv -= degatTotal
         val pvApres = cible.pv
 
-        print("$nom inflige ($pvAvant - $pvApres) dégâts à $cible.$nom")
+        println("$nom inflige ${pvAvant -pvApres} dégâts à ${cible.nom}")
     }
 
     /**
      * Demande au joueur de renommer le monstre.
      * si l'utilisateur entre un texte vide, le nom n'est pas modifié.
      */
-//    fun renommer(){
-//        print("Renommer $nom ?")
-//    }
+    fun renommer(){
+        println("Renommer le monstre ${this.nom} ?")
+        val nouveauNom = readln()
+
+    }
 }

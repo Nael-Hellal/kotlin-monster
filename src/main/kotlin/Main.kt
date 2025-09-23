@@ -26,6 +26,8 @@ fun main() {
     val monstre1 = IndividuMonstre(1, "springleaf", especespringleaf,joueur,1500.0)
     val monstre2 = IndividuMonstre(2, "flamkip", especeflamkip, joueur,1500.0)
     val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, joueur, 1500.0)
+//    monstre1.attaquer(cible = monstre3)
+    monstre1.renommer()
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))
