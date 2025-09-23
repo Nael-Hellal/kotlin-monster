@@ -115,4 +115,14 @@ class IndividuMonstre (
         if(nouveauNom.isEmpty()){
         }
     }
+
+    fun afficheDetail(){
+        espece.afficheArt()
+        println(" Nom: $nom Niveau : $niveau" +
+                "Exp: $exp" +
+                "PV: $pv" +
+                "" +
+                "Atq: $attaque Def: $défense Vitesse: $vitesse" +
+                "AtqSpe: $attaqueSpe DefSpe: $defenceSpe")
+    }
 }
