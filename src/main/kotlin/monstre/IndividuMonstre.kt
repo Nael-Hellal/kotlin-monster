@@ -89,7 +89,7 @@ class IndividuMonstre (
      * @param cible Monstre cible de l'attaque
      */
     fun attaquer(cible: IndividuMonstre){
-        var degatBrut = this.attaque
+        val degatBrut = this.attaque
         var degatTotal = degatBrut-(this.défense/2)
 
         if (degatTotal < 1){
@@ -99,6 +99,14 @@ class IndividuMonstre (
         cible.pv -= degatTotal
         val pvApres = cible.pv
 
-        println("$nom inflige ($pvAvant - $pvApres) dégâts à $cible.$nom")
+        print("$nom inflige ($pvAvant - $pvApres) dégâts à $cible.$nom")
     }
+
+    /**
+     * Demande au joueur de renommer le monstre.
+     * si l'utilisateur entre un texte vide, le nom n'est pas modifié.
+     */
+//    fun renommer(){
+//        print("Renommer $nom ?")
+//    }
 }
