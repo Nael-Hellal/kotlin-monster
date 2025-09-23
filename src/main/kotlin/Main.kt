@@ -28,6 +28,7 @@ fun main() {
     val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, joueur, 1500.0)
 //    monstre1.attaquer(cible = monstre3)
     monstre1.renommer()
+    monstre1.afficheDetail()
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))

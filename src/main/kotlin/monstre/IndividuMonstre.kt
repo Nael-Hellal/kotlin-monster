@@ -117,12 +117,12 @@ class IndividuMonstre (
     }
 
     fun afficheDetail(){
-        espece.afficheArt()
-        println(" Nom: $nom Niveau : $niveau" +
-                "Exp: $exp" +
-                "PV: $pv" +
-                "" +
-                "Atq: $attaque Def: $défense Vitesse: $vitesse" +
-                "AtqSpe: $attaqueSpe DefSpe: $defenceSpe")
+
+        println("=============================== \n" +
+                " Nom: $nom Niveau : $niveau \n Exp: $exp \n PV: $pv \n" +
+                "===============================\n" +
+                " Atq: $attaque Def: $défense Vitesse: $vitesse \n AtqSpe: $attaqueSpe DefSpe: $defenceSpe \n" +
+                "===============================")
+        println(espece.afficheArt())
     }
 }
