@@ -6,6 +6,7 @@ import org.example.monde.Zone
 import org.example.monstre.IndividuMonstre
 import org.example.item.Badge
 import org.example.item.Item
+import org.example.item.MonsterKube
 
 var joueur = Entraineur(1, "Sacha", 100)
 var especespringleaf = EspeceMonstre(id= 1, nom = "Springleaf", type = "Graine", basePv = 60, baseAttaque = 9, baseDefense = 11, baseVitesse = 10, baseAttaqueSpe = 12, baseDefenseSpe = 14, modPv = 34.0, modAttaque = 6.5, modDefense = 9.0, modVitesse = 8.0, modAttaqueSpe = 7.0, modDefenseSpe = 10.0, description = "Petit monstre espiègle rond comme une graine, adore le soleil", particularites = "sa feuille sur la tête indique son humeur.", caractères = "Curieux, amical, timide")
@@ -16,7 +17,7 @@ var especebugsyface= EspeceMonstre(id = 10, nom= "Bugsyface", type="Insecte", ba
 var especegalum= EspeceMonstre(id = 13, nom = "Galum", type = "Minéral", basePv = 55, baseAttaque = 12, baseDefense = 15, baseVitesse = 6, baseAttaqueSpe = 8, baseDefenseSpe = 12, modPv = 13.0, modAttaque = 9.0, modDefense = 13.0, modVitesse = 4.0, modAttaqueSpe = 6.5, modDefenseSpe = 10.5, description = "Golem ancien de pierre, yeux lumineux en garde.", particularites = "Peut rester immobile des heures comme une statue.", caractères = "Sérieux, stoïque, fiable")
 var prairie= Zone(id = 1, nom = "Prairie", Expzone = 0, especesMonstres = mutableListOf("Springleaf"))
 var montagne= Zone(id= 2, nom = "Montagne", Expzone= 0)
-
+var kube = MonsterKube(id = 1, nom = "Kube monstre", description = " un cube permettant de capturer des monstre sauvage", chanceCapture = 50.0)
 
 
 
@@ -27,11 +28,12 @@ fun main() {
     montagne.ZonePrecedente = prairie
     val monstre1 = IndividuMonstre(1, "springleaf", especespringleaf,joueur,1500.0)
     val monstre2 = IndividuMonstre(2, "flamkip", especeflamkip, joueur,1500.0)
-    val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, joueur, 1500.0)
+    val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, null, 1500.0)
 //    monstre1.attaquer(cible = monstre3)
 //    monstre1.renommer()
 //    monstre1.afficheDetail()
-    val badgePierre = Badge(id = 1, nom = "Badge Roche", description = "Badge gagné lorsque le joueur atteint l'arène de pierre.")
+    val badgePierre = Badge(id = 1, nom = "Badge Roche", description = "Badge gagné lorsque le joueur atteint l'arène de pierre.", champion = Entraineur(id=1, nom = "Rocky", argents = 60000))
+    kube.utiliser(monstre3)
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))
