@@ -36,5 +36,6 @@ class CombatMonstre(
             }
             return false
         }
+        println("$joueur.nom")
     }
 }
