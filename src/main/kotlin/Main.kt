@@ -4,6 +4,8 @@ import org.example.dresseur.Entraineur
 import org.example.monstre.EspeceMonstre
 import org.example.monde.Zone
 import org.example.monstre.IndividuMonstre
+import org.example.item.Badge
+import org.example.item.Item
 
 var joueur = Entraineur(1, "Sacha", 100)
 var especespringleaf = EspeceMonstre(id= 1, nom = "Springleaf", type = "Graine", basePv = 60, baseAttaque = 9, baseDefense = 11, baseVitesse = 10, baseAttaqueSpe = 12, baseDefenseSpe = 14, modPv = 34.0, modAttaque = 6.5, modDefense = 9.0, modVitesse = 8.0, modAttaqueSpe = 7.0, modDefenseSpe = 10.0, description = "Petit monstre espiègle rond comme une graine, adore le soleil", particularites = "sa feuille sur la tête indique son humeur.", caractères = "Curieux, amical, timide")
@@ -27,8 +29,9 @@ fun main() {
     val monstre2 = IndividuMonstre(2, "flamkip", especeflamkip, joueur,1500.0)
     val monstre3 = IndividuMonstre(3, "aquamy", especeaquamy, joueur, 1500.0)
 //    monstre1.attaquer(cible = monstre3)
-    monstre1.renommer()
-    monstre1.afficheDetail()
+//    monstre1.renommer()
+//    monstre1.afficheDetail()
+    val badgePierre = Badge(id = 1, nom = "Badge Roche", description = "Badge gagné lorsque le joueur atteint l'arène de pierre.")
 }
 //    println(changeCouleur("Hello","rouge"))
 //    println(changeCouleur("World","bleu"))
