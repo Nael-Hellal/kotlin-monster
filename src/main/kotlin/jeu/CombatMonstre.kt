@@ -36,6 +36,7 @@ class CombatMonstre(
             }
             return false
         }
-        println("$joueur.nom")
+        println("${joueur.nom} à gagné !")
+
     }
 }
