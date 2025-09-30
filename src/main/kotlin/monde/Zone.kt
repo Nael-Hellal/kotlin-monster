@@ -13,4 +13,9 @@ class Zone(
 ) {
 
 //TODO : - faire la méthode genereMonstre() - faire la méthode rencontreMonstre()
+
+    fun genereMonstre(){
+
+    }
+
 }
