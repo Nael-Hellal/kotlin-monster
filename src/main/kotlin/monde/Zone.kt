@@ -24,18 +24,19 @@ class Zone(
      * @property especeAlea vas recuperer aléatoirement un monstre de la liste especesMonstres
      * @property monstre permet de générer les caracteristique du monstre
      */
-    fun genereMonstre(){
+    fun genereMonstre(): IndividuMonstre {
         val especeAlea=this.especesMonstres.random()
         var monstre = IndividuMonstre(1, "${this.nom}", especeAlea, null, 0.0)
         monstre.exp = Expzone.toDouble() + Random.nextInt(-20, 21)
-        return
+        return monstre
     }
 
     fun rencontreMonstre(){
         genereMonstre()
-        var monstreSauvage = especesMonstres
-        var premierMonstre = joueur.equipeMonstre.forEach { it.pv > 0 }
-        val combat = CombatMonstre(premierMonstre, monstreSauvage)
+        var monstreSauvage = genereMonstre()
+        var premierMonstre = joueur.equipeMonstre.find { it.pv > 0 }!!
+        var combatMonstre = CombatMonstre(premierMonstre, monstreSauvage)
+        combatMonstre.lancerCombat()
     }
 
 }
