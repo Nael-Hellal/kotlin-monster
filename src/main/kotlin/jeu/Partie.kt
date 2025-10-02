@@ -49,6 +49,21 @@ class Partie(
         }
         else{
             println("modifier ordre de l'équipe: ")
+            println("selectionner le premier monstre: ")
+            var remplaçant1 = readln().toInt()
+            println("selectionner le second monstre: ")
+            var remplaçant2 = readln().toInt()
+
+
+            var monstreremplaçant1 = joueur.equipeMonstre[remplaçant1]
+            val monstreremplaçantdeplacer = joueur.equipeMonstre[remplaçant1]
+            var monstreremplaçant2 = joueur.equipeMonstre[remplaçant2]
+
+            monstreremplaçant1 = monstreremplaçant2
+            monstreremplaçant2 = monstreremplaçantdeplacer
+        }
+
+        fun examineEquipe(){
 
         }
     }
